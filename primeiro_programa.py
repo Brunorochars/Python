@@ -139,16 +139,21 @@ print(f"O número maior é: {maior}") """
 # medida (Celsius ou Fahrenheit) e converte a temperatura para a outra unidade. 
 # O programa deve informar a temperatura convertida.
 
-""" unidade = int(input("Escolha a unidade: \n 1 - Celsius \n 2 - Fahrenheit \n Digite a opção: "))
+""" def converter_temperatura(temperatura):
+    if(unidade == 1):
+        fahrenheit = (9/5*temperatura) + 32
+        return fahrenheit
+    else:
+        celcius = (temperatura - 32) * 5/9
+        return celcius
+
+unidade = int(input("Escolha a unidade: \n 1 - Celsius \n 2 - Fahrenheit \n Digite a opção: "))
 
 temperatura = int(input("Digite a temperatura: "))
 
-if(unidade == 1):
-    fahrenheit = (9/5*temperatura) + 32
-    print(f"A temperatura {temperatura} C° convertida para Fahrenheit é {fahrenheit} F°!!! ")
-else:
-    celcius = (temperatura - 32) * 5/9
-    print(f"A temperatura {temperatura} F° convertida para Celcius é {celcius} C°!!! ") """
+print(f"A temperatura convertida é: {converter_temperatura(temperatura)}") """
+
+
 
 # Exercício 03: Escrever um programa que recebe a nota de um aluno e informa se ele 
 # foi aprovado, reprovado ou se está de recuperação. Considere as seguintes regras:
@@ -156,15 +161,38 @@ else:
 # - Nota menor que 7 e maior ou igual a 5: Recuperação
 # - Nota menor que 5: Reprovado 
 
+""" def calcular_status_aluno(nota):
+    if(nota >= 7):
+        return "Aprovado!!!"
+    elif(nota < 7 and nota >= 5):
+        return "Recuperação!!!"
+    else:
+        return "Reprovado!!!"
 
 nota = float(input("Digite a sua nota: "))
+print(f"O status do aluno é : {calcular_status_aluno(nota)}") """
+
+# Exercício 04: Escrever um programa que recebe a idade de uma 
+# pessoa e informa se ela é criança, adolescente, adulto ou idoso, 
+# de acordo com as seguintes faixas etárias:
+# - Criança: 0 a 12 anos
+# - Adolescente: 13 a 17 anos
+# - Adulto: 18 a 59 anos
+# - Idoso: 60 anos ou mais
+
+
+""" def faixa_etaria(idade):
+    if(idade <= 12):
+        return "Criança"
+    elif(idade > 12 and idade < 18):
+        return "Adolescente"
+    elif(idade > 17 and idade < 60):
+        return "Adulto"
+    else:
+        return "Idoso"
     
-if(nota >= 7):
-    print("Aprovado!!!")
-elif(nota < 7 and nota >= 5):
-    print("Recuperação!!!")
-else:
-    print("Reprovado!!!")
+idade = int(input("Digite a sua idade: "))
+print(f"A sua faixa etária é: {faixa_etaria(idade)}") """
 
 
     
