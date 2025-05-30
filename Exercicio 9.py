@@ -4,6 +4,20 @@
 # menu deve ser exibido até que o usuário escolha a opção "5 - Sair". A interação 
 # com o menu deve ser feita usando chamadas de função.
 
+def escolher_opcao(opcao):
+
+    if(opcao == 1):
+        return primeiro_numero + segundo_numero
+    elif(opcao == 2):
+        return primeiro_numero - segundo_numero
+    elif(opcao == 3):
+        return primeiro_numero * segundo_numero
+    elif(opcao == 4):
+        return primeiro_numero / segundo_numero
+    elif(opcao == 5):
+        return "Você saiu!!!"
+    else:
+        return "Número inválido!!!"
 
 opcao = int(input("----------- MENU-----------\n" \
                   "|Digite a opção desejada:  |\n" \
@@ -18,17 +32,8 @@ opcao = int(input("----------- MENU-----------\n" \
 primeiro_numero = int(input("Digite o priemiro número: "))
 segundo_numero = int(input("Digite o segundo número: "))
 
-if(opcao == 1):
-    print(f"A soma dos dois número é {primeiro_numero + segundo_numero}!!!")
-elif(opcao == 2):
-    print(f"A soma dos dois número é {primeiro_numero - segundo_numero}!!!")
-elif(opcao == 3):
-    print(f"A soma dos dois número é {primeiro_numero * segundo_numero}!!!")
-elif(opcao == 4):
-    print(f"A soma dos dois número é {primeiro_numero / segundo_numero}!!!")
-elif(opcao == 5):
-    print("Você saiu!!!")
-else:
-    print("Número inválido!!!")
+print(f"O resultado é: {escolher_opcao(opcao)}")
+
+
 
 
