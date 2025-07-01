@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nome": "Black Princess",
+        "data_aquisicao": "2023-10-01",
+        "tipo": "Cerveja",
+        "percentual_alcoolico": 5.0
+    },
+    {
+        "id": 3,
+        "nome": "Red Label",
+        "data_aquisicao": "2023-10-10",
+        "tipo": "Destilado",
+        "percentual_alcoolico": 40.0
+    },
+    {
+        "id": 4,
+        "nome": "Absinto",
+        "data_aquisicao": "27/06/2025",
+        "tipo": "Destilado",
+        "percentual_alcoolico": 74.0
+    },
+    {
+        "id": 5,
+        "nome": "Absolut",
+        "data_aquisicao": "27/06/2025",
+        "tipo": "Destilado",
+        "percentual_alcoolico": 40.0
+    }
+]
