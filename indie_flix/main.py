@@ -61,6 +61,7 @@ import catalogo
 import busca
 
 def main():
+    filmes = catalogo.ler_arquivo("filmes.json")
     
     while True:
         print("======================================")
@@ -81,7 +82,7 @@ def main():
         opcao_usuario = input("Escolha a opção desejada de 1 a 6: ")
 
         if opcao_usuario == "1":
-            catalogo.listar_filmes(filmes=filmes)
+            catalogo.listar_filmes(filmes)
         elif opcao_usuario == "2":
            filmes = catalogo.adicionar_filme(filmes=filmes)
         elif opcao_usuario == "3":

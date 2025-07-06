@@ -1,0 +1,38 @@
+[
+    {
+        "id": 2,
+        "titulo": "O Senhor do An\u00e9is: As Duas Torres",
+        "diretor": "Peter Jackson",
+        "ano_lancamento": 2002,
+        "genero": "Fantasia",
+        "duracao": 179.0,
+        "nota_pessoal": "9"
+    },
+    {
+        "id": 3,
+        "titulo": "Tartarugas ninja",
+        "diretor": "Jonathan Liebesman",
+        "ano_lancamento": 2014,
+        "genero": "a\u00e7\u00e3o",
+        "duracao": 101.0,
+        "nota_pessoal": "7"
+    },
+    {
+        "id": 4,
+        "titulo": "Drive",
+        "diretor": "Nicolas Winding Refn",
+        "ano_lancamento": 2012,
+        "genero": "A\u00e7\u00e3o",
+        "duracao": 100.0,
+        "nota_pessoal": "8.5"
+    },
+    {
+        "id": 5,
+        "titulo": "Dois caras legais",
+        "diretor": "Shane Black",
+        "ano_lancamento": 2016,
+        "genero": "Com\u00e9dia",
+        "duracao": 116.0,
+        "nota_pessoal": "8.8"
+    }
+]
