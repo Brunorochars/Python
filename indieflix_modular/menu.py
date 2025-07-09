@@ -21,6 +21,7 @@ def exibir_menu():
         
 
         opcao = input("Escolha uma opção de (1 a 6): ").strip()
+        print("\n")
 
         if opcao == "1":
             catalogo.listar_filmes(filmes)

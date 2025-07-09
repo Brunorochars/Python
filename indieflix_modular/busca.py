@@ -1,12 +1,14 @@
 def buscar_filme(filmes: list):
     print("\n===========| Buscar Filmes |===========\n")
-    print("Digite o Título ou aperte enter para passar:")
+    print("Informe o Título ou aperte enter para passar:")
     titulo = input("Título (ou parte): ").lower().strip()
-    print("Digite o Diretor ou aperte enter para passar:")
+    print("Informe o Diretor ou aperte enter para passar:")
     diretor = input("Diretor (ou parte): ").lower().strip()
-    print("Digite o Gênero ou aperte enter para passar:")
+    print("Informe o Gênero ou aperte enter para passar:")
     genero = input("Gênero: ").lower().strip()
+    print("Informe o Ano Mínimo ou aperte enter para passar:")
     ano_min = input("Ano mínimo: ").strip()
+    print("Informe o Ano Mínimo ou aperte enter para passar:")
     ano_max = input("Ano máximo: ").strip()
     ordenar = input("Ordenar por ano? (s/n): ").lower().strip() == "s"
     resultados = []

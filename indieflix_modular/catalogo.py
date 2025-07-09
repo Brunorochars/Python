@@ -11,6 +11,9 @@ def escrever_arquivo(nome_arquivo: str, filmes: list):
         json.dump(filmes, escritor, indent=4)
 
 def adicionar_filme(filmes: list):
+    print("=======================================")
+    print("========== Adicionar Filmes ===========")
+    print("=======================================\n")
     titulo = input("Digite o título do filme: ")
     diretor = input("Digite o nome do diretor: ")
     while True:
@@ -49,17 +52,27 @@ def listar_filmes(filmes: list):
         print(f"|[{filme['id']}] {filme['titulo']} | {filme['diretor']} | {filme['ano_lancamento']} | {filme['genero']} | {filme['duracao']} min | Nota: {filme['nota_pessoal']}|")
 
 def remover_filme(filmes: list):
+
     listar_filmes(filmes)
+    filme = None
+
     try:
         id_remover = int(input("\nID do filme a remover: "))
     except ValueError:
         print("ID inválido.")
         return filmes
-    filme = next((f for f in filmes if f["id"] == id_remover), None)
+    
+    for filme_existente in filmes:
+        if filme_existente["id"] == id_remover:
+            filme = filme_existente
+            break
+
     if not filme:
         print("Filme não encontrado.")
         return filmes
+    
     confirmar = input(f"Remover '{filme['titulo']}'? (s/n): ").lower()
+
     if confirmar == "s":
         filmes.remove(filme)
         escrever_arquivo("filmes.json", filmes)
@@ -68,16 +81,26 @@ def remover_filme(filmes: list):
 
 def editar_filme(filmes: list):
     listar_filmes(filmes)
+
+    filme = None
+
     try:
         id_editar = int(input("\nID do filme a editar: "))
     except ValueError:
         print("ID inválido.")
         return filmes
-    filme = next((f for f in filmes if f["id"] == id_editar), None)
+    
+    for filme_existente in filmes:
+        if filme_existente["id"] == id_editar:
+            filme = filme_existente
+            break
+
     if not filme:
         print("Filme não encontrado.")
         return filmes
+    
     print("Pressione Enter para manter o valor atual.")
+
     novo = input(f"Título [{filme['titulo']}]: ").strip()
     if novo: filme["titulo"] = novo
     novo = input(f"Diretor [{filme['diretor']}]: ").strip()
@@ -93,6 +116,7 @@ def editar_filme(filmes: list):
         except ValueError:
             pass
     novo = input(f"Nota pessoal [{filme['nota_pessoal']}]: ").strip()
+
     if novo: filme["nota_pessoal"] = novo
     escrever_arquivo("filmes.json", filmes)
     print("Filme editado com sucesso.")
