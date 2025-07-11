@@ -80,14 +80,15 @@ def remover_filme(filmes: list):
     return filmes
 
 def editar_filme(filmes: list):
+    
     listar_filmes(filmes)
 
     filme = None
 
     try:
-        id_editar = int(input("\nID do filme a editar: "))
+        id_editar = int(input("\nDigite o ID do filme que você deseja editar: \n"))
     except ValueError:
-        print("ID inválido.")
+        print("O ID digitado é inválido inválido.")
         return filmes
     
     for filme_existente in filmes:
