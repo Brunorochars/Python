@@ -11,7 +11,9 @@ def buscar_filme(filmes: list):
     print("Informe o Ano Mínimo ou aperte enter para passar:")
     ano_max = input("Ano máximo: ").strip()
     ordenar = input("Ordenar por ano? (s/n): ").lower().strip() == "s"
+    
     resultados = []
+    
     for filme in filmes:
         if titulo and titulo not in filme["titulo"].lower():
             continue
@@ -26,6 +28,7 @@ def buscar_filme(filmes: list):
         resultados.append(filme)
     if ordenar:
         resultados.sort(key=lambda x: x["ano_lancamento"])
+        
     print("\n===========| Resultados |===========")
     if not resultados:
         print("Nenhum filme encontrado.")

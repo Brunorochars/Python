@@ -22,16 +22,48 @@ def adicionar_filme(filmes: list):
             break
         except ValueError:
             print("Ano inválido.")
-    genero = input("Digite o gênero do filme: ")
+    while True:
+        print("|=====================================|")
+        print("|========== Gênero do Filme ==========|")
+        print("|=====================================|")
+        print("|                                     |")
+        print("|1 - Curta                            |")
+        print("|2 - Documentário                     |")
+        print("|3 - Filme                            |")
+        print("---------------------------------------\n")
+        opcao = input("Selecione o gênero do filme:")
+        if opcao == "1":
+            genero = "Curta"
+            break
+        elif opcao == "2":
+            genero = "Documentário"
+            break
+        elif opcao == "3":
+            genero = "Filme"
+            break
+        else:
+            print("Opção inválida!!")
+
     while True:
         try:
             duracao = float(input("Digite a duração do filme (minutos): "))
             break
         except ValueError:
             print("Duração inválida.")
-    nota_pessoal = input("Nota pessoal: ")
+    
+    while True:
+        try:
+            nota = float(input("Nota pessoal: "))
+            if nota >= 0 and nota <= 10:
+                nota_pessoal = nota
+                break
+            else:
+                print("A nota deve ser de 0 a 10!!!")
+        except ValueError:
+            print("Digite uma nota válida (número)!")
+
     novo_filme = {
-        "id": filmes[-1]["id"] + 1 if filmes else 1,
+        "id": filmes[-1]["id"] + 1,
         "titulo": titulo,
         "diretor": diretor,
         "ano_lancamento": ano_lancamento,
@@ -45,7 +77,7 @@ def adicionar_filme(filmes: list):
     return filmes
 
 def listar_filmes(filmes: list):
-    print("\n==============================| Lista de Filmes |==============================")
+    print("\n=====================================| Lista de Filmes |=====================================")
     if not filmes:
         print("Nenhum filme cadastrado.")
     for filme in filmes:
@@ -84,12 +116,13 @@ def editar_filme(filmes: list):
     listar_filmes(filmes)
 
     filme = None
-
-    try:
-        id_editar = int(input("\nDigite o ID do filme que você deseja editar: \n"))
-    except ValueError:
-        print("O ID digitado é inválido inválido.")
-        return filmes
+    while True:
+        try:
+            id_editar = int(input("\nDigite o ID do filme que você deseja editar: \n"))
+            break
+        except ValueError:
+            print("O ID digitado é inválido inválido.")
+        
     
     for filme_existente in filmes:
         if filme_existente["id"] == id_editar:
@@ -106,8 +139,34 @@ def editar_filme(filmes: list):
     if novo: filme["titulo"] = novo
     novo = input(f"Diretor [{filme['diretor']}]: ").strip()
     if novo: filme["diretor"] = novo
-    novo = input(f"Gênero [{filme['genero']}]: ").strip()
-    if novo: filme["genero"] = novo
+    opcao_editar_genero = input("Deseja alterar o gênero? (S/N): ").lower()
+
+    if opcao_editar_genero == "s":
+        while True:
+            print("|=====================================|")
+            print("|========== Gênero do Filme ==========|")
+            print("|=====================================|")
+            print("|                                     |")
+            print("|1 - Curta                            |")
+            print("|2 - Documentário                     |")
+            print("|3 - Filme                            |")
+            print("---------------------------------------\n")
+            opcao = input("Selecione o gênero do filme:")
+            if opcao == "1":
+                filme['genero'] = "Curta"
+                break
+            elif opcao == "2":
+                filme['genero'] = "Documentário"
+                break
+            elif opcao == "3":
+                filme['genero'] = "Filme"
+                break
+            else:
+                print("Opção inválida!!")
+    else:
+        print("Gênero: " + filme['genero'])
+        ##novo = input(f"Gênero [{filme['genero']}]: ").strip()
+        ##if novo: filme["genero"] = novo
     novo = input(f"Ano [{filme['ano_lancamento']}]: ").strip()
     if novo.isdigit(): filme["ano_lancamento"] = int(novo)
     novo = input(f"Duração [{filme['duracao']}]: ").strip()
@@ -116,7 +175,16 @@ def editar_filme(filmes: list):
             filme["duracao"] = float(novo)
         except ValueError:
             pass
-    novo = input(f"Nota pessoal [{filme['nota_pessoal']}]: ").strip()
+    while True:
+        try:
+            novo = float(input(f"Nota pessoal [{filme['nota_pessoal']}]: "))
+            if novo >= 0 and novo <= 10:
+                filme["nota_pessoal"] = novo
+                break
+            else:
+                print("A nota deve ser de 0 a 10!!!")
+        except ValueError:
+            print("Digite uma nota válida (número)!")
 
     if novo: filme["nota_pessoal"] = novo
     escrever_arquivo("filmes.json", filmes)
