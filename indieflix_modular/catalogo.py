@@ -165,8 +165,7 @@ def editar_filme(filmes: list):
                 print("Opção inválida!!")
     else:
         print("Gênero: " + filme['genero'])
-        ##novo = input(f"Gênero [{filme['genero']}]: ").strip()
-        ##if novo: filme["genero"] = novo
+        
     novo = input(f"Ano [{filme['ano_lancamento']}]: ").strip()
     if novo.isdigit(): filme["ano_lancamento"] = int(novo)
     novo = input(f"Duração [{filme['duracao']}]: ").strip()
