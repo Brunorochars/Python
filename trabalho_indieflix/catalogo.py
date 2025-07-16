@@ -5,7 +5,6 @@ def ler_arquivo(nome_arquivo: str):
     with open(nome_arquivo, "r", encoding="utf-8") as leitor:
         return json.load(leitor)
     
-
 def escrever_arquivo(nome_arquivo: str, filmes: list):
     with open(nome_arquivo, "w", encoding="utf-8") as escritor:
         json.dump(filmes, escritor, indent=4)
@@ -17,11 +16,15 @@ def adicionar_filme(filmes: list):
     titulo = input("Digite o título do filme: ")
     diretor = input("Digite o nome do diretor: ")
     while True:
-        try:
-            ano_lancamento = int(input("Digite o ano de lançamento (AAAA): "))
-            break
-        except ValueError:
-            print("Ano inválido.")
+        
+        ano_lancamento = input("Digite o ano de lançamento (AAAA): ")
+        if ano_lancamento.isdigit():
+            ano = int(ano_lancamento)
+            if 0 < ano <= 9999:
+                ano_lancamento = ano
+                break
+        print("O ano deve ser um inteiro com 4 digitos!!!")    
+        
     while True:
         print("|=====================================|")
         print("|========== Gênero do Filme ==========|")
@@ -166,8 +169,15 @@ def editar_filme(filmes: list):
     else:
         print("Gênero: " + filme['genero'])
         
-    novo = input(f"Ano [{filme['ano_lancamento']}]: ").strip()
-    if novo.isdigit(): filme["ano_lancamento"] = int(novo)
+        while True:    
+            novo = input(f"Ano [{filme['ano_lancamento']}]: ").strip()
+            if novo.isdigit(): 
+                ano = int(novo)
+                if 0 < ano <= 9999:
+                    filme["ano_lancamento"] = ano
+                    break
+            print("Ano deve ser um inteiro com 4 digitos!!!")
+
     novo = input(f"Duração [{filme['duracao']}]: ").strip()
     if novo:
         try:
@@ -185,7 +195,9 @@ def editar_filme(filmes: list):
         except ValueError:
             print("Digite uma nota válida (número)!")
 
-    if novo: filme["nota_pessoal"] = novo
+    if novo: 
+        filme["nota_pessoal"] = novo
+
     escrever_arquivo("filmes.json", filmes)
     print("Filme editado com sucesso.")
     return filmes

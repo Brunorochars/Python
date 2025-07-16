@@ -13,9 +13,9 @@
         "titulo": "Drive",
         "diretor": "Nicolas Winding Refn",
         "ano_lancamento": 2012,
-        "genero": "A\u00e7\u00e3o",
+        "genero": "Filme",
         "duracao": 100.0,
-        "nota_pessoal": "8.5"
+        "nota_pessoal": 8.5
     },
     {
         "id": 5,
@@ -31,7 +31,7 @@
         "titulo": "S\u00f3 deus perdoa",
         "diretor": "Nicolas Winding Refn",
         "ano_lancamento": 2013,
-        "genero": "A\u00e7\u00e3o",
+        "genero": "Curta",
         "duracao": 90.0,
         "nota_pessoal": 6.8
     },
@@ -88,5 +88,14 @@
         "genero": "Filme",
         "duracao": 150.0,
         "nota_pessoal": 8.6
+    },
+    {
+        "id": 14,
+        "titulo": "Filme qualquer",
+        "diretor": "Diretor qualquer",
+        "ano_lancamento": 2025,
+        "genero": "Document\u00e1rio",
+        "duracao": 130.0,
+        "nota_pessoal": 8.4
     }
 ]

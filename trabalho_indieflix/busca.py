@@ -4,7 +4,31 @@ def buscar_filme(filmes: list):
           "Caso contrario aperte [ENTER] para pular:")
     titulo = input("Título (ou parte): ").lower().strip()
     diretor = input("Diretor (ou parte): ").lower().strip()
-    genero = input("Gênero: ").lower().strip()
+    genero = ""
+    opcao_busca_genero = input("Deseja filtrar por gênero? (S/N): ").lower()
+    if opcao_busca_genero == "s":
+        while True:
+                print("|=====================================|")
+                print("|========== Gênero do Filme ==========|")
+                print("|=====================================|")
+                print("|                                     |")
+                print("|1 - Curta                            |")
+                print("|2 - Documentário                     |")
+                print("|3 - Filme                            |")
+                print("---------------------------------------\n")
+                opcao = input("Selecione o gênero do filme: ")
+                if opcao == "1":
+                    genero = "curta"
+                    break
+                elif opcao == "2":
+                    genero = "documentario"
+                    break
+                elif opcao == "3":
+                    genero = "filme"
+                    break
+                else:
+                    print("Opação inválida!!!")
+    
     ano_min = input("Ano mínimo: ").strip()
     ano_max = input("Ano máximo: ").strip()
     ordenar = input("Ordenar por ano? (s/n): ").lower().strip() == "s"
