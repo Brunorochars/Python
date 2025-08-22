@@ -39,19 +39,10 @@
         "id": 7,
         "titulo": "A bruxa de blair",
         "diretor": "Bruno",
-        "ano_lancamento": 2006,
+        "ano_lancamento": 2004,
         "genero": "Filme",
         "duracao": 120.0,
-        "nota_pessoal": 10.0
-    },
-    {
-        "id": 9,
-        "titulo": "Olho bionico",
-        "diretor": "Seu z\u00e9",
-        "ano_lancamento": 2025,
-        "genero": "Filme",
-        "duracao": 120.0,
-        "nota_pessoal": "10"
+        "nota_pessoal": 9
     },
     {
         "id": 10,
@@ -84,18 +75,18 @@
         "id": 13,
         "titulo": "Macaco aranha",
         "diretor": "Jos\u00e9",
-        "ano_lancamento": 2025,
+        "ano_lancamento": 2024,
         "genero": "Filme",
         "duracao": 150.0,
         "nota_pessoal": 8.6
     },
     {
         "id": 14,
-        "titulo": "Filme quatro",
-        "diretor": "Robert",
-        "ano_lancamento": 2021,
+        "titulo": "Filme qualquer",
+        "diretor": "Diretor qualquer",
+        "ano_lancamento": 2025,
         "genero": "Document\u00e1rio",
-        "duracao": 140.0,
-        "nota_pessoal": 5.0
+        "duracao": 130.0,
+        "nota_pessoal": 8.4
     }
 ]
