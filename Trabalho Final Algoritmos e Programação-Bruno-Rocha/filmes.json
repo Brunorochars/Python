@@ -1,0 +1,101 @@
+[
+    {
+        "id": 2,
+        "titulo": "O Senhor do An\u00e9is: As Duas Torres",
+        "diretor": "Peter Jackson",
+        "ano_lancamento": 2002,
+        "genero": "Filme",
+        "duracao": 179.0,
+        "nota_pessoal": "9"
+    },
+    {
+        "id": 4,
+        "titulo": "Drive",
+        "diretor": "Nicolas Winding Refn",
+        "ano_lancamento": 2012,
+        "genero": "Filme",
+        "duracao": 100.0,
+        "nota_pessoal": 8.5
+    },
+    {
+        "id": 5,
+        "titulo": "Dois caras legais",
+        "diretor": "Shane Black",
+        "ano_lancamento": 2016,
+        "genero": "Filme",
+        "duracao": 116.0,
+        "nota_pessoal": "8.8"
+    },
+    {
+        "id": 6,
+        "titulo": "S\u00f3 deus perdoa",
+        "diretor": "Nicolas Winding Refn",
+        "ano_lancamento": 2013,
+        "genero": "Curta",
+        "duracao": 90.0,
+        "nota_pessoal": 6.8
+    },
+    {
+        "id": 7,
+        "titulo": "A bruxa de blair",
+        "diretor": "Bruno",
+        "ano_lancamento": 2004,
+        "genero": "Filme",
+        "duracao": 120.0,
+        "nota_pessoal": 9
+    },
+    {
+        "id": 9,
+        "titulo": "Olho bionico",
+        "diretor": "Seu z\u00e9",
+        "ano_lancamento": 2025,
+        "genero": "Filme",
+        "duracao": 120.0,
+        "nota_pessoal": "10"
+    },
+    {
+        "id": 10,
+        "titulo": "O lobisomi do arvoredo",
+        "diretor": "Mano lima",
+        "ano_lancamento": 1995,
+        "genero": "Filme",
+        "duracao": 100.0,
+        "nota_pessoal": "10"
+    },
+    {
+        "id": 11,
+        "titulo": "A besta",
+        "diretor": "Jacinto",
+        "ano_lancamento": 1975,
+        "genero": "Filme",
+        "duracao": 120.0,
+        "nota_pessoal": 10
+    },
+    {
+        "id": 12,
+        "titulo": "A besta 2",
+        "diretor": "Jacinto Jr",
+        "ano_lancamento": 1995,
+        "genero": "Filme",
+        "duracao": 130.0,
+        "nota_pessoal": 8
+    },
+    {
+        "id": 13,
+        "titulo": "Macaco aranha",
+        "diretor": "Jos\u00e9",
+        "ano_lancamento": 2024,
+        "genero": "Filme",
+        "duracao": 150.0,
+        "nota_pessoal": 8.6
+    },
+    {
+        "id": 14,
+        "titulo": "Filme qualquer",
+        "diretor": "Diretor qualquer",
+        "ano_lancamento": 2025,
+        "genero": "Document\u00e1rio",
+        "duracao": 130.0,
+        "nota_pessoal": 8.4
+    }
+]
